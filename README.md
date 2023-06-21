@@ -34,5 +34,9 @@ exit
 ```
 Where, 3000 is the Pods port.
 
-
+## View your application logs
+```sh
+kubectl get pods -n dev-namespace
+kubectl logs pod-info-deployment-757cb75bbb-drtvt -n dev-namespace
+```
 
