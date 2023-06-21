@@ -40,3 +40,19 @@ kubectl get pods -n dev-namespace
 kubectl logs pod-info-deployment-757cb75bbb-drtvt -n dev-namespace
 ```
 
+## Application Deployment Challenge
+```sh
+kubectl apply -f quote.yaml
+kubectl get pod -n dev-namespace
+kubeclt get pods
+kubectl exec -it busybox-6b95744666-m7j8q -- /bin/sh
+kubectl get pods -n dev-namespace -o wide
+```
+Inside BusyBox runing in default namespace you can run wget using any dev-namespace Pod IPs, for example:
+```sh
+rm index.html
+wget 10.244.2.7:8080
+cat index.html
+exit
+```
+
