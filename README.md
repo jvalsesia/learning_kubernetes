@@ -67,3 +67,19 @@ kubectl port-forward service/demo-service 8000:80
 Where, 8000 is the machine port and 80 is the pod/container port.
 
 
+## Add resource requests and limits to your pod
+```sh
+kubectl apply -f deployment.yaml
+kubectl get pods
+```
+Where, requests means start running pod when memory >= 64Mi and cpu >= 250m and stops running pod when memory > 128Mi and cpu > 500m.
+```yaml
+  resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+
+```

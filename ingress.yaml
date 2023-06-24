@@ -3,12 +3,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 
 metadata:
-  name: rustwebserver-ingress
+  name: demo-ingress
 
 spec:
   defaultBackend:
     service:
-      name: rustwebserver-service
+      name: demo-service
 
       port:
         number: 9900
