@@ -56,3 +56,14 @@ cat index.html
 exit
 ```
 
+## Expose your application to the internet with LoadBalancer
+Labels in deployment.yaml must match labels in service.yaml.
+
+```sh
+kubectl apply -f service.yaml
+kubectl get services -n dev-namespace 
+kubectl port-forward service/demo-service 8000:80
+```
+Where, 8000 is the machine port and 80 is the pod/container port.
+
+
