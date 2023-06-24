@@ -83,3 +83,12 @@ Where, requests means start running pod when memory >= 64Mi and cpu >= 250m and 
               cpu: "500m"
 
 ```
+
+## Delete your Kubernetes objects and tear down your cluster
+```sh
+kubectl delete -f busybox.yaml
+kubectl delete -f deployment.yaml
+kubectl delete -f quote.yaml
+kubectl delete -f service.yaml
+kubectl delete -f namespace.yaml
+```
